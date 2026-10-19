@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest — каталог книг</title>
+</head>
+<body>
+    <header>
+        <p>BookNest — библиотека для читателей</p>
+
+        <nav aria-label="Главная навигация">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="book.html">Карточка книги</a></li>
+                <li><a href="loan.html">Выдача книги</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Каталог книг</h1>
+            <p>Найди книгу для следующего чтения.</p>
+
+            <form action="index.html" method="get">
+                <p>
+                    <label for="search">Название или автор:</label>
+                    <input type="search" id="search" name="search">
+                </p>
+
+                <p>
+                    <label for="genre">Жанр:</label>
+                    <select id="genre" name="genre">
+                        <option value="all">Все жанры</option>
+                        <option value="fantasy">Фэнтези</option>
+                        <option value="science">Научная литература</option>
+                        <option value="classic">Классика</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="sort">Сортировка:</label>
+                    <select id="sort" name="sort">
+                        <option value="title">По названию</option>
+                        <option value="author">По автору</option>
+                        <option value="year">По году</option>
+                    </select>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="available"
+                           name="available" value="yes">
+                    <label for="available">Только доступные</label>
+                </p>
+
+                <button type="submit">Применить фильтры</button>
+            </form>
+        </section>
+
+        <section aria-labelledby="books-heading">
+            <h2 id="books-heading">Список книг</h2>
+
+            <article>
+                <h3>Маленький принц</h3>
+                <p>Автор: Антуан де Сент-Экзюпери</p>
+                <p>Год: <time datetime="1943">1943</time></p>
+                <p>Статус: доступна</p>
+                <a href="book.html">Подробнее о книге</a>
+            </article>
+
+            <article>
+                <h3>1984</h3>
+                <p>Автор: Джордж Оруэлл</p>
+                <p>Год: <time datetime="1949">1949</time></p>
+                <p>Статус: доступна</p>
+                <a href="book.html">Подробнее о книге</a>
+            </article>
+
+            <article>
+                <h3>Гарри Поттер и философский камень</h3>
+                <p>Автор: Дж. К. Роулинг</p>
+                <p>Год: <time datetime="1997">1997</time></p>
+                <p>Статус: выдана</p>
+                <a href="book.html">Подробнее о книге</a>
+            </article>
+
+            <article>
+                <h3>Преступление и наказание</h3>
+                <p>Автор: Фёдор Достоевский</p>
+                <p>Год: <time datetime="1866">1866</time></p>
+                <p>Статус: доступна</p>
+                <a href="book.html">Подробнее о книге</a>
+            </article>
+
+            <article>
+                <h3>Дюна</h3>
+                <p>Автор: Фрэнк Герберт</p>
+                <p>Год: <time datetime="1965">1965</time></p>
+                <p>Статус: выдана</p>
+                <a href="book.html">Подробнее о книге</a>
+            </article>
+
+            <article>
+                <h3>Краткая история времени</h3>
+                <p>Автор: Стивен Хокинг</p>
+                <p>Год: <time datetime="1988">1988</time></p>
+                <p>Статус: доступна</p>
+                <a href="book.html">Подробнее о книге</a>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Совет читателю</h2>
+            <p>Выбирай книги по интересам и возвращай их вовремя.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>BookNest — учебный проект WEB 3210.</p>
+        <a href="loan.html">Перейти к выдаче книги</a>
+    </footer>
+</body>
+</html>

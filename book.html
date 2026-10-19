@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest — карточка книги</title>
+</head>
+<body>
+    <header>
+        <p>BookNest — библиотека для читателей</p>
+
+        <nav aria-label="Главная навигация">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="book.html">Карточка книги</a></li>
+                <li><a href="loan.html">Выдача книги</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="Хлебные крошки">
+            <ol>
+                <li><a href="index.html">Каталог</a></li>
+                <li aria-current="page">Маленький принц</li>
+            </ol>
+        </nav>
+
+        <article>
+            <h1>Маленький принц</h1>
+
+            <figure>
+                <img
+                    src="https://placehold.co/240x360?text=BookNest"
+                    alt="Заглушка обложки книги «Маленький принц»"
+                    width="240"
+                    height="360"
+                >
+                <figcaption>Обложка книги</figcaption>
+            </figure>
+
+            <section>
+                <h2>Характеристики</h2>
+
+                <dl>
+                    <dt>Автор</dt>
+                    <dd>Антуан де Сент-Экзюпери</dd>
+
+                    <dt>Год публикации</dt>
+                    <dd><time datetime="1943">1943</time></dd>
+
+                    <dt>Жанр</dt>
+                    <dd>Философская сказка</dd>
+
+                    <dt>Статус</dt>
+                    <dd>Доступна</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h2>Описание книги</h2>
+                <p>
+                    История маленького путешественника рассказывает
+                    о дружбе, ответственности и умении видеть главное.
+                </p>
+            </section>
+
+            <section>
+                <h2>Отзывы читателей</h2>
+
+                <article>
+                    <h3>Отзыв Анны</h3>
+                    <p>Книга заставляет задуматься о важных вещах.</p>
+                </article>
+
+                <article>
+                    <h3>Отзыв Ивана</h3>
+                    <p>Небольшая, но запоминающаяся история.</p>
+                </article>
+
+                <h3>Оставить отзыв</h3>
+
+                <form action="book.html" method="get">
+                    <p>
+                        <label for="review-name">Ваше имя:</label>
+                        <input
+                            type="text"
+                            id="review-name"
+                            name="review-name"
+                            required
+                            maxlength="50"
+                        >
+                    </p>
+
+                    <p>
+                        <label for="review-text">Текст отзыва:</label>
+                        <textarea
+                            id="review-text"
+                            name="review-text"
+                            required
+                            minlength="5"
+                            maxlength="500"
+                            rows="4"
+                        ></textarea>
+                    </p>
+
+                    <button type="submit">Отправить отзыв</button>
+                </form>
+            </section>
+        </article>
+
+        <aside>
+            <h2>Похожие книги</h2>
+            <ul>
+                <li><a href="book.html">Алиса в Стране чудес</a></li>
+                <li><a href="book.html">Приключения Тома Сойера</a></li>
+            </ul>
+        </aside>
+
+        <p><a href="loan.html">Перейти к выдаче книги</a></p>
+    </main>
+
+    <footer>
+        <p>BookNest — учебный проект WEB 3210.</p>
+        <a href="index.html">Вернуться в каталог</a>
+    </footer>
+</body>
+</html>
